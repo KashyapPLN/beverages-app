@@ -1,0 +1,46 @@
+.header{
+    height:36vw;
+    /* margin:30px auto; */
+    background: url('../../assets/banner1.jpg') no-repeat center center;
+    background-size:cover;
+    border-radius: 30px;
+    position: relative;
+
+
+}
+.header-contents{
+    position:absolute;
+    bottom:15%;
+    left:5%;
+    display:flex;
+    flex-direction: column;
+    max-width: 70%;
+    align-items: start;
+    gap:1.2vw;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.header-contents h2{
+    color:orange;
+    font-weight: 600;
+    font-size: max(3.5vw,20px);
+}
+.header-contents p{
+    font-weight: 500;
+    font-size: 1.2vw;
+ 
+}
+.header-contents button{
+    background-color: transparent;
+    color: #c00416;
+    border: 1px solid #c00416;
+    padding:1vw 2.3vw;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-contents button:hover{
+    background-color: white;
+}
