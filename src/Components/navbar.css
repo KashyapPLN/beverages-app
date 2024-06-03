@@ -50,3 +50,34 @@
 .login:hover{
     background: #e9ecef;
 }
+
+.login-modal-header{
+border-bottom:none;
+}
+.login-modal-body{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.login-modal-footer{
+    border-top: none;
+    display:flex;
+    justify-content: center;
+      padding-bottom: 20px;
+}
+.login-modal-footer button{
+    width: 70%;
+}
+.login-modal-body-text{
+    display: flex;
+    align-items: center;
+}
+
+.login-modal-body-text button{
+    color:#0d6efd;
+    border: none;
+    padding: 0;
+    padding-left: 10px;
+}
