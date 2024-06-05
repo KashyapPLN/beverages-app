@@ -9,7 +9,7 @@ import { CiSearch } from 'react-icons/ci';
 export default function NavBar() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => {setShow(true);setLogin(true)};
   const [login,setLogin]=useState(true);
   return (
     <div className='navbar'>
@@ -28,15 +28,15 @@ export default function NavBar() {
   </Modal.Header>
   {login? <Modal.Body className='login-modal-body'>
     <Form.Control type='email' placeholder='Email'/>
-    <Form.Control type='password' placeholder='password'/> 
-    <p className='login-modal-body-text'>don't have an account? <Button variant='text' onClick={(e)=>setLogin(false)}>Create Account</Button></p>  
+    <Form.Control type='password' placeholder='Password'/> 
+    <p className='login-modal-body-text'>Don't have an account? <Button variant='text' onClick={(e)=>setLogin(false)}>Create Account</Button></p>  
   </Modal.Body>
   :
   <Modal.Body className='login-modal-body'>
   <Form.Control type='text' placeholder='Name'/>
   <Form.Control type='text' placeholder='Phone Number'/>
     <Form.Control type='email' placeholder='Email'/>
-    <Form.Control type='password' placeholder='password'/> 
+    <Form.Control type='password' placeholder='Password'/> 
     <p className='login-modal-body-text'>have an account? <Button variant='text' onClick={(e)=>setLogin(true)}>Login</Button></p>    
   </Modal.Body>}
   <Modal.Footer className='login-modal-footer'>

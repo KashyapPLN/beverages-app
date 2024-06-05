@@ -42,7 +42,7 @@ export default function ExploreMenu() {
         },
         {
             id:7,
-            category:'ice-creams',
+            category:'ice creams',
             pic:icecream
         }
     ]
@@ -50,7 +50,7 @@ export default function ExploreMenu() {
   return (
     <div className='explore-menu'>
         <div className='explore-menu-text mt-2'>
-        <h1>Pick Your Blend</h1>
+        <h2>Pick Your Blend</h2>
         <p>Indulge in your dream blend today and explore a world of refreshing delights crafted just for you!</p>
         </div>       
 <div className='explore-menu-list'>

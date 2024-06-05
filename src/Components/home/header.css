@@ -44,3 +44,17 @@
 .header-contents button:hover{
     background-color: white;
 }
+
+@media (max-width:1050px) {
+    /* .header-contents{
+        max-width: 60%;
+    } */
+}
+@media (max-width:750px) {
+   .header-contents p{
+    display: none;
+   }
+   .header-contents button{
+    padding: 4px 14px;
+   }
+}

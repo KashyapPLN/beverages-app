@@ -1,83 +1,149 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
-.navbar{
+
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding:20px 0;
+    padding: 20px 0;
 }
-.logo{
-    height:50px;
-    width:50px;
+
+.navbar-logo .logo {
+    height: 50px;
+    width: 50px;
 }
-.navbar-logo p{
+
+.navbar-logo p {
     font-weight: 700;
     font-size: 40px;
     font-family: "Caveat", cursive;
-    color:orange
+    color: orange
 }
-.navbar-logo{
-    display:flex;
+
+.navbar-logo {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
-    gap:10px;
+    gap: 10px;
 }
-.navbar-icon-button{
+
+.navbar-icon-button {
     font-size: 30px;
-    color:lightslategrey;
+    color: lightslategrey;
     outline: none;
     border: none;
     padding-left: 0;
     padding-right: 0;
 }
-.navbar-buttons{
-    display:flex;
+
+.navbar-buttons {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
-.login{
+
+.login {
     background: transparent;
     color: lightslategrey;
     border: 1px solid lightslategrey;
-    padding:10px 30px;
+    padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
     transition: 0.3s;
 }
-.login:hover{
+
+.login:hover {
     background: #e9ecef;
 }
 
-.login-modal-header{
-border-bottom:none;
+.login-modal-header {
+    border-bottom: none;
 }
-.login-modal-body{
-    display:flex;
+
+.login-modal-body {
+    display: flex;
     flex-direction: column;
     gap: 20px;
 
 }
 
-.login-modal-footer{
+.login-modal-footer {
     border-top: none;
-    display:flex;
+    display: flex;
     justify-content: center;
-      padding-bottom: 20px;
+    padding-bottom: 20px;
 }
-.login-modal-footer button{
+
+.login-modal-footer button {
     width: 70%;
 }
-.login-modal-body-text{
+
+.login-modal-body-text {
     display: flex;
     align-items: center;
 }
 
-.login-modal-body-text button{
-    color:#0d6efd;
+.login-modal-body-text button {
+    color: #0d6efd;
     border: none;
     padding: 0;
     padding-left: 10px;
+}
+
+@media (max-width:1050px) {
+    .navbar-logo .logo {
+        height: 44px;
+        width: 44px;
+    }
+    .navbar-logo{
+        gap:8px;
+    }
+    .navbar-logo p{
+        font-size: 36px;
+    }
+    .navbar-buttons{
+        gap: 12px; 
+    }
+    .login {
+       padding: 8px 25px;
+    }
+    .navbar-icon-button{
+        font-size: 25px;
+    }
+}
+@media (max-width:900px) {
+    .navbar-logo .logo {
+        height: 36px;
+        width: 36px;
+    }
+    .navbar-logo{
+        gap:6px;
+    }
+    .navbar-logo p{
+        font-size: 30px;
+    }
+    .navbar-buttons{
+        gap: 10px; 
+    }
+    .login {
+       padding: 6px 20px;
+    }
+    .navbar-icon-button{
+        font-size: 25px;
+    }
+}
+@media (max-width:750px) {
+  
+    .navbar-buttons{
+        gap: 8px; 
+    }
+    .login {
+       padding: 4px 14px;
+    }
+    .navbar-icon-button{
+        font-size: 20px;
+    }
 }
