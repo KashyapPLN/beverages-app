@@ -74,4 +74,15 @@
     .footer{
         margin-top: 50px;
     }
+    .footer-logo .logo {
+        height: 36px;
+        width: 36px;
+    }
+    .navbar-logo{
+        gap:6px;
+    }
+    .footer p{
+        font-size: 30px;
+    }
+   
   }

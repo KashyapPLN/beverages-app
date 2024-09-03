@@ -4,6 +4,8 @@ import logo from '../assets/logo.png'
 import { Button, Form, Modal } from 'react-bootstrap';
 import { IoCartOutline } from 'react-icons/io5';
 import { CiSearch } from 'react-icons/ci';
+import Login from './login/Login';
+import Signup from './login/Signup';
 
 
 export default function NavBar() {
@@ -26,22 +28,9 @@ export default function NavBar() {
   <Modal.Header className='login-modal-header' closeButton>
     <Modal.Title>{login ? 'Login':'Create Account'}</Modal.Title>
   </Modal.Header>
-  {login? <Modal.Body className='login-modal-body'>
-    <Form.Control type='email' placeholder='Email'/>
-    <Form.Control type='password' placeholder='Password'/> 
-    <p className='login-modal-body-text'>Don't have an account? <Button variant='text' onClick={(e)=>setLogin(false)}>Create Account</Button></p>  
-  </Modal.Body>
-  :
-  <Modal.Body className='login-modal-body'>
-  <Form.Control type='text' placeholder='Name'/>
-  <Form.Control type='text' placeholder='Phone Number'/>
-    <Form.Control type='email' placeholder='Email'/>
-    <Form.Control type='password' placeholder='Password'/> 
-    <p className='login-modal-body-text'>have an account? <Button variant='text' onClick={(e)=>setLogin(true)}>Login</Button></p>    
-  </Modal.Body>}
-  <Modal.Footer className='login-modal-footer'>
-  {login?  <Button variant='primary'>Login</Button> :<Button variant='success'>Create Account</Button> } 
-  </Modal.Footer>
+  {login? <Login setLogin={setLogin} handleClose={handleClose}/>
+  :<Signup setLogin={setLogin} handleClose={handleClose}/>
+  }
 </Modal>
     </div>
   )

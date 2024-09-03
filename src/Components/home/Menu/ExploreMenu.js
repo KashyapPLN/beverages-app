@@ -1,9 +1,9 @@
 import React from 'react';
 import './exploreMenu.css';
 import juice from '../../../assets/juice.jpeg';
-import smoothies from '../../../assets/smoothie.jpg';
+import smoothies from '../../../assets/strawberry-banana_smoothie.jpg';
 import popsicles from '../../../assets/popsicles.jpg';
-import milkshakes from '../../../assets/milkshakes.png';
+import milkshakes from '../../../assets/milkshakes.jpg';
 import thickshakes from '../../../assets/thickshake.png';
 import icecream from '../../../assets/icecream.png';
 import mocktails from '../../../assets/mocktails.jpg';

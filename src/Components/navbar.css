@@ -7,7 +7,6 @@
     align-items: center;
     padding: 20px 0;
 }
-
 .navbar-logo .logo {
     height: 50px;
     width: 50px;
@@ -17,7 +16,7 @@
     font-weight: 700;
     font-size: 40px;
     font-family: "Caveat", cursive;
-    color: orange
+    color: orange;
 }
 
 .navbar-logo {
