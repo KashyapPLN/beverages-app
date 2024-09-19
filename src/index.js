@@ -8,13 +8,17 @@ import { Provider } from 'react-redux';
 import store from './Store.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 root.render(
   <BrowserRouter>
     <Auth0Provider
-      domain="dev-hd3ezek5r1p5rmfa.us.auth0.com"
-      clientId="rJWOQO7broO6KyjGwGtKc7AsG2Ta4NXf"
+      domain={domain}
+      clientId={clientId}
       authorizationParams={{
-        redirect_uri: window.location.origin
+        redirect_uri: window.location.origin,
+        audience: `https://${domain}/api/v2/`,
+      scope: "openid profile email read:current_user update:current_user_metadata"
       }}
     >
       <Provider store={store}>

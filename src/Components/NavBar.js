@@ -10,11 +10,13 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { useDispatch } from 'react-redux';
 import { setCredentials,clearCredentials } from '../features/auth/authSlice';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export default function NavBar() {
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   
   const [show, setShow] = useState(false);
+const navigate = useNavigate();
   const handleClose = () => setShow(false);
   const dispatch = useDispatch();
   const userProfile = useSelector((state) => state.auth.user);
@@ -38,8 +40,8 @@ export default function NavBar() {
   return (
     <div className='navbar'>
 <div className='navbar-logo'>
-  <img src={logo} alt='logo' className='logo'/>
-  <p>Frution</p>
+  <img src={logo} alt='logo' className='logo' onClick={()=>navigate('/')}/>
+  <p onClick={()=>navigate('/')}>Frution</p>
 </div>
 <div className='navbar-buttons'>
 <Button className='navbar-icon-button'variant='text'><CiSearch /></Button>
@@ -51,6 +53,7 @@ export default function NavBar() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
+      <Dropdown.Item onClick={(e)=>navigate('/profile')}>Profile</Dropdown.Item>
         <Dropdown.Item onClick={handleLogout}>logout</Dropdown.Item>
         
       </Dropdown.Menu>
