@@ -4,6 +4,7 @@ import fruitsbg from './assets/fruits-bg.mp4';
 import logo from './assets/logo.png'
 import { FaLocationDot } from 'react-icons/fa6';
 import { CiSearch } from 'react-icons/ci';
+import { FaSearch } from 'react-icons/fa';
 
 export default function Landing() {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -70,8 +71,8 @@ export default function Landing() {
             </select>
                        </div>
                        <div className='landing-search-div-mobile'>
-                       <span className='search-icon'><CiSearch /></span>
-        <input className='landing-search-input ms-2' type='text' placeholder='search for your favourites'/>
+                       <span ><FaSearch /></span>
+        <input className='landing-search-input-mobile ms-2' type='text' placeholder='search for your favourites'/>
         </div>
           </div>}
        

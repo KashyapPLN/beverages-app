@@ -77,6 +77,7 @@ body{
   
   p {
         margin-bottom: 2rem;
+        font-weight: 500;
   }
   
   .ordernow-btn{
@@ -102,7 +103,7 @@ body{
   .location-search-div {
     height: 50px;
     background-color: white;
-    color: black;
+     color: black;
     align-items: center;
     border-radius: 6px;
     display: flex;
@@ -127,7 +128,7 @@ body{
       /* font-size: 1rem; */
       border:none;
       outline: none;
-      background-color: white;
+      background-color: transparent;
       height: 48px;
       flex-grow: 1;
   }
@@ -153,11 +154,14 @@ body{
   border:none;
   outline:none;
   width:90%;
+  background-color: transparent;
 }
 .location-div-mobile,.landing-search-div-mobile{
   height:50px;
+  color: white;
+  align-items: center;
   border-radius: 6px;
-  background-color: white;
+  border:1px solid orange;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -169,12 +173,25 @@ body{
   border:none;
   outline: none;
   width:90%;
-  background-color: white;
+  background-color: transparent;
+  color: white;
   height: 48px;
 }
 .landing-search-div-mobile{
   margin-top: 2rem;
   align-items: center;
+}
+
+.landing-search-input-mobile{
+  height: 48px;
+  border:none;
+  outline:none;
+  width:90%;
+  background-color: transparent;
+  color: white;  
+}
+.landing-search-input-mobile::placeholder{
+  color: white;
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   .location-div-mobile,.landing-search-div-mobile{
