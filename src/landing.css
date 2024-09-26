@@ -76,12 +76,12 @@ body{
   }
   
   p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+        margin-bottom: 2rem;
   }
   
   .ordernow-btn{
     padding: 10px 20px;
+    margin-top: 2rem;
     font-size: 1.2rem;
     background-color: orange;
     border: none;
@@ -108,9 +108,9 @@ body{
     display: flex;
     flex-direction: row;
     /* justify-content: center; */
-    width: 40vw; /* Width for larger screens */
-    max-width: 600px; /* Optional max width */
+    width: 600px;
     margin: 0 auto; /* Center the div */
+    padding:0 20px;
 }
 
 .location-div {
@@ -119,13 +119,16 @@ body{
     gap: 10px;
     align-items: center;
     height: 50px;
-}
+    padding: 0 10px;
+    
+ }
 
 .location-dropdown {
       /* font-size: 1rem; */
       border:none;
       outline: none;
 }
+
 
 .vertical-line {
     width: 2px; /* Width of the vertical line */
@@ -138,9 +141,34 @@ body{
   color:orange
 }
 
-@media (max-width: 768px) {
-  .location-search-div {
-    width: 90vw;
-  }
+.search-icon{
+  color:rgb(164, 163, 163);
+  font-size: 20px;
+}
+.landing-search-input{
+  height: 50px;
+  border:none;
+  outline:none;
+  width:90%;
+}
+.location-div-mobile,.landing-search-div-mobile{
+  height:50px;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.location-dropdown-mobile {
+  /* font-size: 1rem; */
+  border:none;
+  outline: none;
+  width:90%;
+}
+.landing-search-div-mobile{
+  margin-top: 2rem;
+  align-items: center;
 }
   

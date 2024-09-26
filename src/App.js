@@ -16,7 +16,7 @@ function App() {
     {redirect&&<div className="App">
       <NavBar />
       <Routes>     
-        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         {user&&<Route path='/profile' element={<Profile />} />}
       </Routes>
    

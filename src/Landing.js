@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './landing.css';
 import fruitsbg from './assets/fruits-bg.mp4';
 import logo from './assets/logo.png'
@@ -6,10 +6,28 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { CiSearch } from 'react-icons/ci';
 
 export default function Landing() {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener to resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div className="landing-container">
       {/* Video background */}
-      <video className="video-background" autoPlay loop muted>
+      <video className="video-background" autoPlay loop muted
+       playsInline
+       webkit-playsinline="true">
         <source src={fruitsbg} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -28,7 +46,7 @@ export default function Landing() {
         <img className='logo-landing' src={logo}/>
         <h1>Frution</h1>
         <p>Indulge in the taste of pure, natural goodness delivered right to your home.</p>
-        <div className='location-search-div'>
+        {isLargeScreen?<div className='location-search-div'>
           <div className='location-div'>
           <span className='location-icon'><FaLocationDot /></span>
           <select className='location-dropdown'>
@@ -40,8 +58,22 @@ export default function Landing() {
             <span className='vertical-line'></span>
                     </div>
           <span className='search-icon'><CiSearch /></span>
-        <input classNmae='landing-search-input' type='text'/>
+        <input className='landing-search-input ms-2' type='text' placeholder='search for your favourites'/>
+        </div>:<div>
+        <div className='location-div-mobile'>
+          <span className='location-icon'><FaLocationDot /></span>
+          <select className='location-dropdown-mobile'>
+              <option value="">Select Location</option>
+              <option value="city1">City 1</option>
+              <option value="city2">City 2</option>
+              <option value="city3">City 3</option>
+            </select>
+                       </div>
+                       <div className='landing-search-div-mobile'>
+                       <span className='search-icon'><CiSearch /></span>
+        <input className='landing-search-input ms-2' type='text' placeholder='search for your favourites'/>
         </div>
+          </div>}
        
         <button className='ordernow-btn'>Order now</button>
       </div>
