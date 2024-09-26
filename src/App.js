@@ -5,20 +5,28 @@ import Home from './Components/home/Home';
 import Footer from './Components/home/Footer';
 import Profile from './Components/Profile';
 import { useSelector } from 'react-redux';
+import Landing from './Landing';
+import { useState } from 'react';
 
 function App() {
+  const [redirect,setRedirect]=useState(false);
   const user = useSelector((state) => state.auth.user);
   return (
     <>   
-    <div className="App">
+    {redirect&&<div className="App">
       <NavBar />
-      <Routes>
+      <Routes>     
         <Route path='/' element={<Home />} />
         {user&&<Route path='/profile' element={<Profile />} />}
       </Routes>
    
-    </div>
-    <Footer/>
+    </div>}
+    {redirect&&<Footer/>}
+    {!redirect&&<div>
+    <Routes>     
+        <Route path='/' element={<Landing />} />
+        </Routes>
+      </div>}
     </>
   );
 }
