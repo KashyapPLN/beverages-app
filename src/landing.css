@@ -128,7 +128,9 @@ body{
       border:none;
       outline: none;
       background-color: white;
-}
+      height: 48px;
+      flex-grow: 1;
+  }
 
 
 .vertical-line {
@@ -147,7 +149,7 @@ body{
   font-size: 20px;
 }
 .landing-search-input{
-  height: 50px;
+  height: 48px;
   border:none;
   outline:none;
   width:90%;
@@ -168,9 +170,16 @@ body{
   outline: none;
   width:90%;
   background-color: white;
+  height: 48px;
 }
 .landing-search-div-mobile{
   margin-top: 2rem;
   align-items: center;
 }
-  
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .location-div-mobile,.landing-search-div-mobile{
+    width:60%;
+    margin: 2rem auto;
+
+  }
+}
