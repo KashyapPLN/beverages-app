@@ -40,8 +40,8 @@ const navigate = useNavigate();
   return (
     <div className='navbar'>
 <div className='navbar-logo'>
-  <img src={logo} alt='logo' className='logo' onClick={()=>navigate('/')}/>
-  <p onClick={()=>navigate('/')}>Frution</p>
+  <img src={logo} alt='logo' className='logo' onClick={()=>navigate('/home')}/>
+  <p onClick={()=>navigate('/home')}>Frution</p>
 </div>
 <div className='navbar-buttons'>
 <Button className='navbar-icon-button'variant='text'><CiSearch /></Button>
